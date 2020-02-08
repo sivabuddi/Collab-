@@ -1,0 +1,12 @@
+!unzip Communities.zip -d House
+
+!pip install shutil
+import shutil
+shutil.move("/content/HouseFlag/Communities/Dataset", "/content")
+
+!pip install mxnet
+!pip install gluoncv
+
+!pip install mxnet-cu100mkl
+
+!python  /content/Houseflag/Communities/train_faster_rcnn.py --epochs 20 --batch-size 4
